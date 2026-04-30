@@ -56,8 +56,9 @@ cd C:\himlt
 ### Step 3 — Download Deployment Files
 
 ```cmd
-curl -O https://raw.githubusercontent.com/MachineVisionTeam/HIMLT_V2/main/docker-compose.yml
-curl -O https://raw.githubusercontent.com/MachineVisionTeam/HIMLT_V2/main/.env.example
+curl -O https://raw.githubusercontent.com/MachineVisionTeam/HIMLT_V2/main/HIMLT_Docker/docker-compose.yml
+curl -O https://raw.githubusercontent.com/MachineVisionTeam/HIMLT_V2/main/HIMLT_Docker/.env.example
+curl -O https://raw.githubusercontent.com/MachineVisionTeam/HIMLT_V2/main/HIMLT_Docker/README.md
 ```
 
 ---
