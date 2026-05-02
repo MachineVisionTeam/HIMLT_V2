@@ -1,0 +1,19 @@
+How this ties into the HIMLT React app (himlt_app)
+
+1) Copy ChatAssistantInline.tsx next to your App (or keep the path below).
+
+2) Import at the top of App.tsx:
+   import ChatAssistantInline from './ChatAssistantInline';
+
+3) Render at the end of your root layout (same as current project), so the bubble sits above the slide UI:
+   <ChatAssistantInline
+     context="himlt"
+     placeholder="Type a message..."
+     title="Chat Assistant"
+     greeting="How can I help you today?"
+   />
+
+Notes
+- apiBase defaults to "" (same origin). Your Flask server must expose GET /api/models and POST /api/chat on that host.
+- context="himlt" sends the HIMLT-specific system prompt from backend/prompts.py.
+- HIMLT pins React 19 and packages the inline component instead of importing @tab/chat-assistant from npm, to avoid a peer dependency clash. The react-component/ folder is still the canonical reusable package if you align React versions later.

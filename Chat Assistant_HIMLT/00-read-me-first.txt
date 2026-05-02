@@ -1,0 +1,45 @@
+Chat Assistant_HIMLT — export bundle
+====================================
+
+Nothing was pushed to git. This folder is a copy you can drop into your own HIMLT repo when you are ready.
+
+What is where
+-------------
+frontend/react-component/
+  The @tab/chat-assistant npm-style package (sources + package.json).
+  Run npm install inside that folder if you build or publish it.
+
+frontend/himlt-integration/
+  ChatAssistantInline.tsx — what the running HIMLT app actually uses in the browser.
+  INTEGRATION.example.txt — where to import it and how to mount it in App.tsx.
+
+backend/
+  chat_api_app.py — small Flask app: /api/ping, /api/models, /api/chat, /api/chat/echo
+  prompts.py — HIMLT vs default system prompts (edit here, not scattered in the routes)
+  models/ + utils/ — copies of the Python adapters (OpenAI + Ollama + registry)
+  requirements.txt
+
+Docker
+------
+From this directory (the one that contains Dockerfile):
+  docker build -t himlt-chat-api .
+  docker run --rm -p 5009:5009 \
+    -e OPENAI_API_KEY=your_key \
+    -e OLLAMA_HOST=http://host.docker.internal:11434 \
+    himlt-chat-api
+
+Ollama: the API container does not bundle Ollama; point OLLAMA_HOST at a reachable host.
+On Linux, host.docker.internal may not exist unless you add extra docker run flags.
+
+Running without Docker
+----------------------
+cd backend
+python3 -m venv .venv && . .venv/bin/activate
+pip install -r requirements.txt
+export OPENAI_API_KEY=...   # optional, for gpt-4o-mini
+PORT=5009 python3 chat_api_app.py
+
+Source project
+--------------
+Copied from /opt/tab/llm (tab/llm monorepo): chat-assistant, himlt ChatAssistantInline,
+and the model registry used by web_app.py.
