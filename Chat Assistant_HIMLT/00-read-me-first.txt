@@ -1,7 +1,7 @@
 Chat Assistant_HIMLT — export bundle
 ====================================
 
-Nothing was pushed to git. This folder is a copy you can drop into your own HIMLT repo when you are ready.
+ This folder is a copy you can drop into your own HIMLT repo when you are ready.
 
 What is where
 -------------
