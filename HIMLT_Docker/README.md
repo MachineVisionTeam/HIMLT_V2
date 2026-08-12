@@ -67,7 +67,7 @@ curl -O https://raw.githubusercontent.com/MachineVisionTeam/HIMLT_V2/main/HIMLT_
 
 ```cmd
 copy .env.example .env
-notepad .env
+vi .env
 ```
 
 - Fill in strong passwords for `MYSQL_ROOT_PASSWORD` and `DB_PASSWORD`
