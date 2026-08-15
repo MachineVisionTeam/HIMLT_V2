@@ -17,26 +17,29 @@ Based on the paper:
 | File | Description |
 |------|-------------|
 | `Week2_HMAF_Practice.ipynb` | The practice notebook — run it cell by cell, top to bottom |
-| `consep_features_24hand_128deep.csv` | Per-nucleus features: 24 hand-crafted + 128 deep (PCA of ResNet-50), with cell-type labels and train/test split (~61 MB) |
 | `results/` | Reference outputs (comparison table and plots) so you can check your run |
+
+The feature file (`consep_features_24hand_128deep.csv`, ~61 MB — 24 hand-crafted +
+128 deep features per nucleus, with cell-type labels and train/test split) is hosted on
+Google Drive: [download link](https://drive.google.com/file/d/1_UttTq217yQrwliRKfUbvNGAfA0HkuRR/view?usp=sharing).
+**You normally don't need to download it yourself** — the notebook's first cell fetches it
+automatically.
 
 ## How to run (Google Colab — recommended, no installation needed)
 
-1. Download both `Week2_HMAF_Practice.ipynb` and `consep_features_24hand_128deep.csv`
-   from this repository (green **Code** button → **Download ZIP** is easiest).
+1. Download `Week2_HMAF_Practice.ipynb` from this repository.
 2. Go to [colab.research.google.com](https://colab.research.google.com) and open the notebook
    (**File → Upload notebook**).
-3. In the left sidebar, click the **folder icon**, then the **upload icon**, and upload
-   `consep_features_24hand_128deep.csv`. (The upload takes a minute — it's 61 MB.)
-4. Run the cells one at a time with `Shift+Enter`, reading the text between them.
-   The whole notebook takes only a few minutes on the free CPU runtime.
+3. Run the cells one at a time with `Shift+Enter`, reading the text between them.
+   The first cell downloads the feature CSV for you (a few seconds); the whole notebook
+   takes only a few minutes on the free CPU runtime.
 
-> **Note:** files uploaded to Colab disappear when the session ends. If you come back later,
-> just upload the CSV again (or copy it to your Google Drive and mount Drive instead).
+> **Note:** files downloaded into Colab disappear when the session ends. If you come back
+> later, just run the first cell again — it re-downloads the CSV automatically.
 
 Running locally also works if you have Python 3 with `pandas`, `numpy`, `matplotlib`,
-`scikit-learn`, `xgboost`, and `torch` installed — put both files in the same folder and
-open the notebook with Jupyter.
+`scikit-learn`, `xgboost`, `torch`, and `gdown` installed — open the notebook with Jupyter
+and run it the same way (or download the CSV from the Drive link into the same folder first).
 
 ## What you should get
 
@@ -63,3 +66,7 @@ The features in the CSV are derived from the **CoNSeP dataset**:
 
 CoNSeP is released for research use. This material is provided **for educational purposes**
 within the HIMLT training program; please do not redistribute the data outside that context.
+
+## Acknowledgment
+
+This work was supported by the National Science Foundation under Grant No. 2409704.
