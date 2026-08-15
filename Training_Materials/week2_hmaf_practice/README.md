@@ -63,7 +63,3 @@ The features in the CSV are derived from the **CoNSeP dataset**:
 
 CoNSeP is released for research use. This material is provided **for educational purposes**
 within the HIMLT training program; please do not redistribute the data outside that context.
-
-## Acknowledgment
-
-This work was supported by the National Science Foundation under Grant No. 2409704.
