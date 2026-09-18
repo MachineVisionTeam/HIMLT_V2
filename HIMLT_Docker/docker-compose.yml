@@ -3,7 +3,7 @@ services:
   db:
     image: deepcse/himlt:db
     container_name: himlt_db
-    restart: unless-stopped
+    restart: "no"
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${DB_NAME}
@@ -25,7 +25,7 @@ services:
   redis:
     image: redis:7-alpine
     container_name: himlt_redis
-    restart: unless-stopped
+    restart: "no"
     ports:
       - "6380:6379"
     networks:
@@ -39,7 +39,7 @@ services:
   web:
     image: deepcse/himlt:web
     container_name: himlt_web
-    restart: unless-stopped
+    restart: "no"
     env_file: .env
     environment:
       DB_HOST: db
@@ -59,7 +59,7 @@ services:
   worker:
     image: deepcse/himlt:worker
     container_name: himlt_worker
-    restart: unless-stopped
+    restart: "no"
     env_file: .env
     environment:
       DB_HOST: db
@@ -84,7 +84,7 @@ services:
   iipimage:
     image: iipsrv/iipsrv:latest
     container_name: himlt_iipimage
-    restart: unless-stopped
+    restart: "no"
     environment:
       - IIIF_VERSION=3
       - CORS=*
