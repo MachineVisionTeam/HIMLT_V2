@@ -10,4 +10,4 @@ mkdocs:
 
 python:
   install:
-    - requirements: docs/requirements.txt
+    - requirements: HIMLT_Readmedocs/docs/requirements.txt
