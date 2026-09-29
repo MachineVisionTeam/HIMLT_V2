@@ -1,7 +1,7 @@
 site_name: HIMLT Documentation
 site_description: Hybrid Interactive Machine Learning Tool — setup, architecture, and usage documentation
 site_author: Deepthi Kondreddy
-site_url: https://Hybrid_Interactive_Machine_Learning_Tool//readthedocs.io/en/latest/
+site_url: https://Hybrid_Interactive_Machine_Learning_Tool/readthedocs.io/en/latest/
 copyright: "© 2026 Deepthi kondreddy@Kennesaw State university — NSF Grant No. 2409704"
 
 use_directory_urls: false
