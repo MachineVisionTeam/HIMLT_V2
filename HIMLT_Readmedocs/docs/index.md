@@ -1,5 +1,5 @@
 # HIMLT Documentation
-Kondreddy, D., Barua, S., Yellu, S., Elghazzali, H. and Lee, S., 2026, August. HIMLT: A Hybrid Interactive Machine Learning Tool for Whole Slide Image Analysis. In 2026 International Conference on Intelligent Multimedia, Networking, and Security (IMNS) (pp. 1-6). IEEE.
+**Kondreddy, D., Barua, S., Yellu, S., Elghazzali, H. and Lee, S., 2026, August. HIMLT: A Hybrid Interactive Machine Learning Tool for Whole Slide Image Analysis. In 2026 International Conference on Intelligent Multimedia, Networking, and Security (IMNS) (pp. 1-6). IEEE.**
 
 **Hybrid Interactive Machine Learning Tool for Histopathology Image Analysis**
 
